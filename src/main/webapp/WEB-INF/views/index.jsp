@@ -12,7 +12,7 @@
         <ol>
             <li> Tanya Doroshenko </li>
             <li> Oleksandr Tarasenko </li>
-            <li> </li>
+            <li> Greg Neginskiy </li>
         </ol>
     </body>
 </html>
