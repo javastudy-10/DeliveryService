@@ -11,6 +11,7 @@
         <h2>Задание выполнил:</h2>
         <ol>
             <li> Tanya Doroshenko </li>
+            <li> Oleksandr Tarasenko </li>
             <li> </li>
         </ol>
     </body>
