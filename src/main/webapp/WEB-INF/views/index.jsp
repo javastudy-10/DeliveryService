@@ -13,6 +13,7 @@
             <li> Tanya Doroshenko </li>
             <li> Oleksandr Tarasenko </li>
             <li> Greg Neginskiy </li>
+            <li> Nazar Rybitsyi </li>
         </ol>
     </body>
 </html>
