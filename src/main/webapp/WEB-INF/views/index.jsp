@@ -14,6 +14,7 @@
             <li> Oleksandr Tarasenko </li>
             <li> Greg Neginskiy </li>
             <li> Nazar Rybitsyi </li>
+            <li> Aleksandr Vlasov </li>
         </ol>
     </body>
 </html>
