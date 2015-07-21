@@ -20,7 +20,8 @@
         <property name="mappings">
             <props>
                 <prop key="index.htm">indexController</prop> 
-                 <prop key="doroshenko.htm">doroshenkoController</prop> 
+                 <prop key="doroshenko.htm">doroshenkoController</prop>
+                <prop key="rybitskyi.htm">rybitskyiController</prop>
             </props>
         </property>
     </bean>
@@ -37,4 +38,7 @@
     <bean name="doroshenkoController"
           class="com.javastudy.deliveryservice.mvc.controller.Doroshenko"
           />
+    <bean name="rybitskyiController"
+          class="com.javastudy.deliveryservice.mvc.controller.Rybitskyi"
+            />
 </beans>
