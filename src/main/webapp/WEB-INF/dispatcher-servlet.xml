@@ -47,7 +47,7 @@
     <bean name="neginskiyController"
           class="com.javastudy.deliveryservice.mvc.controller.Neginskiy"
           />
-    <bean name="rubitskiyiController"
+    <bean name="rybitskyiController"
           class="com.javastudy.deliveryservice.mvc.controller.Rybitskyi"
           />
 </beans>
