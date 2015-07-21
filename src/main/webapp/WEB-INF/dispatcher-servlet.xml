@@ -19,7 +19,10 @@
     <bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
         <property name="mappings">
             <props>
-                <prop key="index.htm">indexController</prop>
+                <prop key="index.htm">indexController</prop> 
+                 <prop key="doroshenko.htm">doroshenkoController</prop>
+                <prop key="rybitskyi.htm">rybitskyiController</prop>
+                <prop key="neginskiy.htm">neginskiyController</prop>
             </props>
         </property>
     </bean>
@@ -33,4 +36,13 @@
           class="org.springframework.web.servlet.mvc.ParameterizableViewController"
           p:viewName="index"/>
     
+    <bean name="doroshenkoController"
+          class="com.javastudy.deliveryservice.mvc.controller.Doroshenko"
+          />
+    <bean name="rybitskyiController"
+          class="com.javastudy.deliveryservice.mvc.controller.Rybitskyi"
+            />
+    <bean name="neginskiyController"
+          class="com.javastudy.deliveryservice.mvc.controller.Neginskiy"
+            />
 </beans>
