@@ -44,4 +44,10 @@
     <bean name="akhmedovController"
           class="com.javastudy.deliveryservice.mvc.controller.Akhmedov"
           />
+    <bean name="neginskiyController"
+          class="com.javastudy.deliveryservice.mvc.controller.Neginskiy"
+          />
+    <bean name="rubitskiyiController"
+          class="com.javastudy.deliveryservice.mvc.controller.Rybitskyi"
+          />
 </beans>
