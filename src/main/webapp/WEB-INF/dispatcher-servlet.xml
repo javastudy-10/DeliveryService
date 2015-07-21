@@ -22,6 +22,7 @@
                 <prop key="index.htm">indexController</prop> 
                  <prop key="doroshenko.htm">doroshenkoController</prop>
                 <prop key="rybitskyi.htm">rybitskyiController</prop>
+                <prop key="neginskiy.htm">neginskiyController</prop>
             </props>
         </property>
     </bean>
@@ -40,5 +41,8 @@
           />
     <bean name="rybitskyiController"
           class="com.javastudy.deliveryservice.mvc.controller.Rybitskyi"
+            />
+    <bean name="neginskiyController"
+          class="com.javastudy.deliveryservice.mvc.controller.Neginskiy"
             />
 </beans>
