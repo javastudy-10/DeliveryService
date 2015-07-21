@@ -22,7 +22,6 @@
                 <prop key="index.htm">indexController</prop> 
                 <prop key="doroshenko.htm">doroshenkoController</prop> 
                 <prop key="akhmedov.htm">akhmedovController</prop>
-                 <prop key="doroshenko.htm">doroshenkoController</prop>
                 <prop key="rybitskyi.htm">rybitskyiController</prop>
                 <prop key="neginskiy.htm">neginskiyController</prop>
             </props>
