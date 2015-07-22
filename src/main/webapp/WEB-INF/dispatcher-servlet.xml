@@ -5,13 +5,7 @@
        xmlns="http://www.springframework.org/schema/beans"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
 
-    <bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping"/>
 
-    <!--
-    Most controllers will use the ControllerClassNameHandlerMapping above, but
-    for the index controller we are using ParameterizableViewController, so we must
-    define an explicit mapping for it.
-    -->
     <bean id="urlMapping" class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
         <property name="mappings">
             <props>
@@ -21,6 +15,7 @@
                 <prop key="akhmedov.htm">akhmedovController</prop>
                 <prop key="rybitskyi.htm">rybitskyiController</prop>
                 <prop key="neginskiy.htm">neginskiyController</prop>
+                <prop key="miroshnychenko.htm">miroshnychenkoController</prop>
             </props>
         </property>
     </bean>
@@ -50,5 +45,8 @@
 
     <bean name="vlasovController"
           class="com.javastudy.deliveryservice.mvc.controller.Vlasov"
+            />
+    <bean name="miroshnychenkoController"
+          class="com.javastudy.deliveryservice.mvc.controller.Miroshnychenko"
             />
 </beans>
