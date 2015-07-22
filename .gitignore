@@ -7,7 +7,6 @@ nb-configuration.xml
 *.ear
 *.class
 *.iml
-pom.xml
 
 # eclipse specific git ignore
 *.pydevproject
