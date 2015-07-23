@@ -18,6 +18,7 @@
             <li><a href="/DeliveryService/akhmedov.htm">Renat</a></li>
             <li><a href="/DeliveryService/miroshnychenko.htm">Oleksii Miroshnychenko</a></li>
             <li><a href="/DeliveryService/sambulat.htm">Maxim Sambulat</a></li>
+            <li><a href="/DeliveryService/kurkin.htm">Sergii Kurkin</a></li>
         </ol>
     </body>
 </html>

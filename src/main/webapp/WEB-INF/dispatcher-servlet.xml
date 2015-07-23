@@ -17,7 +17,11 @@
                 <prop key="neginskiy.htm">neginskiyController</prop>
                 <prop key="miroshnychenko.htm">miroshnychenkoController</prop>
                 <prop key="tarasenko.htm">tarasenkoController</prop>
+<<<<<<< HEAD
                 <prop key="sambulat.htm">sambulatController</prop>
+=======
+                <prop key="kurkin.htm">kurkinController</prop>
+>>>>>>> 2fc299e7b593b4bbbb42abd4a2fd08fc01237e7d
             </props>
         </property>
     </bean>
@@ -51,7 +55,6 @@
     <bean name="miroshnychenkoController"
           class="com.javastudy.deliveryservice.mvc.controller.Miroshnychenko"
             />
-    
     <bean name="tarasenkoController"
           class="com.javastudy.deliveryservice.mvc.controller.Tarasenko"
           />
@@ -60,4 +63,7 @@
           class="com.javastudy.deliveryservice.mvc.controller.Sambulat"
             />
 
+    <bean name="kurkinController"
+          class="com.javastudy.deliveryservice.mvc.controller.Kurkin"
+            />
 </beans>
