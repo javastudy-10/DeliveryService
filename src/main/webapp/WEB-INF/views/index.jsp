@@ -17,6 +17,7 @@
             <li><a href="/DeliveryService/vlasov.htm">Aleksandr Vlasov</a></li>
             <li><a href="/DeliveryService/akhmedov.htm">Renat</a></li>
             <li><a href="/DeliveryService/miroshnychenko.htm">Oleksii Miroshnychenko</a></li>
+            <li><a href="/DeliveryService/sambulat.htm">Maxim Sambulat</a></li>
         </ol>
     </body>
 </html>
