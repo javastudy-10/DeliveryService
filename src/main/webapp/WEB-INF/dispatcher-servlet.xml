@@ -17,11 +17,8 @@
                 <prop key="neginskiy.htm">neginskiyController</prop>
                 <prop key="miroshnychenko.htm">miroshnychenkoController</prop>
                 <prop key="tarasenko.htm">tarasenkoController</prop>
-<<<<<<< HEAD
                 <prop key="sambulat.htm">sambulatController</prop>
-=======
                 <prop key="kurkin.htm">kurkinController</prop>
->>>>>>> 2fc299e7b593b4bbbb42abd4a2fd08fc01237e7d
             </props>
         </property>
     </bean>
