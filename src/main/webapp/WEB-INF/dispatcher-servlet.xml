@@ -51,6 +51,7 @@
           class="com.javastudy.deliveryservice.mvc.controller.Miroshnychenko"
             />
 
+
     <bean name="kurkinController"
           class="com.javastudy.deliveryservice.mvc.controller.Kurkin"
             />
