@@ -16,6 +16,7 @@
                 <prop key="rybitskyi.htm">rybitskyiController</prop>
                 <prop key="neginskiy.htm">neginskiyController</prop>
                 <prop key="miroshnychenko.htm">miroshnychenkoController</prop>
+                <prop key="tarasenko.htm">tarasenkoController</prop>>
                 <prop key="kurkin.htm">kurkinController</prop>
             </props>
         </property>
@@ -50,7 +51,9 @@
     <bean name="miroshnychenkoController"
           class="com.javastudy.deliveryservice.mvc.controller.Miroshnychenko"
             />
-
+    <bean name="tarasenkoController"
+          class="com.javastudy.deliveryservice.mvc.controller.Tarasenko"
+            />
 
     <bean name="kurkinController"
           class="com.javastudy.deliveryservice.mvc.controller.Kurkin"
