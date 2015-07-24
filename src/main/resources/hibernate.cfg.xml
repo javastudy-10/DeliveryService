@@ -5,7 +5,7 @@
     <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
     <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
     <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/delivery_service?zeroDateTimeBehavior=convertToNull</property>
-    <property name="hibernate.connection.username">root</property>
-    <property name="hibernate.connection.password">always91</property>
+    <property name="hibernate.connection.username">admin</property>
+    <property name="hibernate.connection.password">12345</property>
   </session-factory>
 </hibernate-configuration>
