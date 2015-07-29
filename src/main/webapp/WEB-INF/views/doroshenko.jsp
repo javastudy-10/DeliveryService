@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -12,6 +13,11 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Hello from Tanya!</h1>
+        <h1>Hello ${name}!</h1>
+        <select>
+        <c:forEach items="${list}" var="item">
+            <option> ${item} </option>
+        </c:forEach>  
+        </select>
     </body>
 </html>
