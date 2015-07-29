@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  */
 @Controller
 public class Rogovskiy {
-    @RequestMapping(method = { RequestMethod.GET })
+    @RequestMapping(method = RequestMethod.GET, value = "/rogovskiy.htm")
     public String getPage() {
         return "rogovskiy";
     }

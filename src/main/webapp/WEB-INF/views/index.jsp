@@ -10,16 +10,16 @@
     <body>
         <h2>Задание выполнил:</h2>
         <ol>
-            <li><a href="/DeliveryService/doroshenko.htm">Tanya Doroshenko</a></li>
-            <li>Oleksandr Tarasenko</li>
-            <li><a href="/DeliveryService/neginskiy.htm">Greg Neginskiy</a></li>
-            <li><a href="/DeliveryService/rybitskyi.htm">Nazar Rybitsyi</a></li>
-            <li><a href="/DeliveryService/vlasov.htm">Aleksandr Vlasov</a></li>
-            <li><a href="/DeliveryService/akhmedov.htm">Renat</a></li>
-            <li><a href="/DeliveryService/miroshnychenko.htm">Oleksii Miroshnychenko</a></li>
-            <li><a href="/DeliveryService/sambulat.htm">Maxim Sambulat</a></li>
-            <li><a href="/DeliveryService/kurkin.htm">Sergii Kurkin</a></li>
-            <li><a href="/DeliveryService/rogovskiy.htm">Denis Rogovskiy</a></li>
+            <li><a href="doroshenko.htm">Tanya Doroshenko</a></li>
+            <li><a href="doroshenko.htm">Oleksandr Tarasenko</a></li>
+            <li><a href="neginskiy.htm">Greg Neginskiy</a></li>
+            <li><a href="rybitskyi.htm">Nazar Rybitsyi</a></li>
+            <li><a href="vlasov.htm">Aleksandr Vlasov</a></li>
+            <li><a href="akhmedov.htm">Renat</a></li>
+            <li><a href="miroshnychenko.htm">Oleksii Miroshnychenko</a></li>
+            <li><a href="sambulat.htm">Maxim Sambulat</a></li>
+            <li><a href="kurkin.htm">Sergii Kurkin</a></li>
+            <li><a href="rogovskiy.htm">Denis Rogovskiy</a></li>
         </ol>
     </body>
 </html>

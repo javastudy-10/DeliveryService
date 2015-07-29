@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class Miroshnychenko {
 
-    @RequestMapping(method = {RequestMethod.GET})
+    @RequestMapping(method = RequestMethod.GET, value = "/miroshnychenko.htm")
     public String getPage() {
         return "miroshnychenko";
     }
