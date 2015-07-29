@@ -30,7 +30,6 @@ public class Doroshenko {
         names.add("misha");
         names.add("gosha");
         names.add("vika");
-        names.add("zhenya");
         
         model.addAttribute("list", names);
         return "doroshenko";
