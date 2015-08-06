@@ -12,8 +12,33 @@
        http://www.springframework.org/schema/mvc
        http://www.springframework.org/schema/mvc/spring-mvc.xsd">
     <context:component-scan base-package="com.javastudy.deliveryservice.mvc.controller"/>
-    <mvc:annotation-driven/>
+    <mvc:annotation-driven validator="validator"/>
+    <mvc:resources mapping="/resources/**" location="/resources/" />
 
+    <!--Internalization-->
+        <mvc:interceptors>
+            <bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor"
+                  p:paramName="language"/>
+        </mvc:interceptors>
+
+        <!--Message Bean-->
+        <bean id="messageSource"
+              class="org.springframework.context.support.ReloadableResourceBundleMessageSource"
+              p:basenames="WEB-INF/i18n/message, WEB-INF/i18n/application"
+              p:defaultEncoding="UTF-8"
+              p:fallbackToSystemLocale="false"/>
+        <!---->
+
+        <bean id="localeResolver"
+              class="org.springframework.web.servlet.i18n.SessionLocaleResolver"
+              p:defaultLocale="ru_RU"/>
+    <!---->
+
+    <!--Validator Bean-->
+        <bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
+            <property name="validationMessageSource" ref="messageSource"/>
+        </bean>
+    <!---->
 
     <bean id="viewResolver"
           class="org.springframework.web.servlet.view.InternalResourceViewResolver"
