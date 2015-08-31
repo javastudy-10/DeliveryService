@@ -27,7 +27,7 @@
     <div class="panel-body">
         <%--Change address--%>
         <form:form action="${url}" modelAttribute="address" method="post"
-                   role="form" class="form-horizontal">
+                   userRole="form" class="form-horizontal">
 
             <%--Current Address--%>
             <div class="form-group">

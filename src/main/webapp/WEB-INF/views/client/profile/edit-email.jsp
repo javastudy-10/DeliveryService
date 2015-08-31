@@ -27,7 +27,7 @@
     <div class="panel-body">
         <%--Change email--%>
         <form:form action="${url}" modelAttribute="email" method="post"
-                   role="form" class="form-horizontal">
+                   userRole="form" class="form-horizontal">
             <div class="form-group">
                     <%--Current email--%>
                 <div class="form-group">

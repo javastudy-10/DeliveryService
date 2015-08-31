@@ -30,7 +30,7 @@
     <div class="panel-heading"><spring:message code="profile.header.auth"/></div>
     <div class="panel-body">
         <%--Login--%>
-        <form role="form" class="form-horizontal">
+        <form:form userRole="form" class="form-horizontal">
             <div class="form-group">
                 <label for="login" class="col-sm-2 control-label">
                     <spring:message code="client.login"/>
@@ -40,10 +40,10 @@
                     <input id="login" type="text" class="form-control" readonly="true" value="${profinfo.login}"/>
                 </div>
             </div>
-        </form>
+        </form:form>
 
         <%--Password--%>
-        <form action="${url_edit_password}" method="post" role="form" class="form-horizontal">
+        <form:form action="${url_edit_password}" method="post" userRole="form" class="form-horizontal">
             <div class="form-group">
                 <label class="col-sm-2 control-label">
                     <spring:message code="profile.password.current"/>
@@ -60,7 +60,7 @@
                     </div>
                 </div>
             </div>
-        </form>
+        </form:form>
     </div>
 </div>
 
@@ -68,7 +68,7 @@
     <div class="panel-heading"><spring:message code="profile.header.userinfo"/></div>
     <div class="panel-body">
         <%--Address--%>
-        <form action="${url_edit_address}" method="post" role="form" class="form-horizontal">
+        <form:form action="${url_edit_address}" method="post" userRole="form" class="form-horizontal">
             <div class="form-group">
                 <label for="address" class="col-sm-2 control-label">
                     <spring:message code="client.address"/>
@@ -85,10 +85,10 @@
                     </div>
                 </div>
             </div>
-        </form>
+        </form:form>
 
         <%--Email--%>
-        <form action="${url_edit_email}"  method="post" role="form" class="form-horizontal">
+        <form:form action="${url_edit_email}"  method="post" userRole="form" class="form-horizontal">
             <div class="form-group">
                 <label for="email" class="col-sm-2 control-label">
                     <spring:message code="client.email"/>
@@ -105,10 +105,10 @@
                     </div>
                 </div>
             </div>
-        </form>
+        </form:form>
 
         <%--Phone--%>
-        <form action="${url_edit_phone}" method="post" role="form" class="form-horizontal">
+        <form:form action="${url_edit_phone}" method="post" userRole="form" class="form-horizontal">
             <div class="form-group">
                 <label for="phone" class="col-sm-2 control-label">
                     <spring:message code="client.phone"/>
@@ -125,7 +125,7 @@
                     </div>
                 </div>
             </div>
-        </form>
+        </form:form>
     </div>
 </div>
 

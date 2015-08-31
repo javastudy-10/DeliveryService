@@ -9,12 +9,12 @@ import javax.validation.constraints.Size;
 public class ModelChangePhone implements Passwording {
     private String currentPhone;
 
-    @Size(min=4, max=16, message="{phone.size}")
-    @Pattern(regexp="^[-+()0-9]+$", message="{phone.pattern}")
+    @Size(min = 4, max = 16, message = "{phone.size}")
+    @Pattern(regexp = "^[-+()0-9]+$", message = "{phone.pattern}")
     private String newPhone;
 
-    @Size(min=6, max=16, message="{password.size}")
-    @Pattern(regexp="^[-+*/|\\\\ @#$%^&(){}?!,.:;`~_'\\\"<>a-zA-Z0-9]+$", message="{password.pattern}")
+    @Size(min = 6, max = 16, message = "{password.size}")
+    @Pattern(regexp = "^[-+*/|\\\\ @#$%^&(){}?!,.:;`~_'\\\"<>a-zA-Z0-9]+$", message = "{password.pattern}")
     private String password;
 
     public ModelChangePhone() {

@@ -8,16 +8,16 @@ import javax.validation.constraints.Size;
  */
 public class ModelChangePassword implements Passwording {
 
-    @Size(min=6, max=16, message="{password.size}")
-    @Pattern(regexp="^[-+*/|\\\\ @#$%^&(){}?!,.:;`~_'\\\"<>a-zA-Z0-9]+$", message="{password.pattern}")
+    @Size(min = 6, max = 16, message = "{password.size}")
+    @Pattern(regexp = "^[-+*/|\\\\ @#$%^&(){}?!,.:;`~_'\\\"<>a-zA-Z0-9]+$", message = "{password.pattern}")
     private String password;
 
-    @Size(min=6, max=16, message="{password.size}")
-    @Pattern(regexp="^[-+*/|\\\\ @#$%^&(){}?!,.:;`~_'\\\"<>a-zA-Z0-9]+$", message="{password.pattern}")
+    @Size(min = 6, max = 16, message = "{password.size}")
+    @Pattern(regexp = "^[-+*/|\\\\ @#$%^&(){}?!,.:;`~_'\\\"<>a-zA-Z0-9]+$", message = "{password.pattern}")
     private String newPassword;
 
-    @Size(min=6, max=16, message="{password.size}")
-    @Pattern(regexp="^[-+*/|\\\\ @#$%^&(){}?!,.:;`~_'\\\"<>a-zA-Z0-9]+$", message="{password.pattern}")
+    @Size(min = 6, max = 16, message = "{password.size}")
+    @Pattern(regexp = "^[-+*/|\\\\ @#$%^&(){}?!,.:;`~_'\\\"<>a-zA-Z0-9]+$", message = "{password.pattern}")
     private String confirmPassword;
 
     public ModelChangePassword() {
@@ -29,7 +29,7 @@ public class ModelChangePassword implements Passwording {
     }
 
     @Override
-    public void setPassword(String pssword) {
+    public void setPassword(String password) {
         this.password = password;
     }
 

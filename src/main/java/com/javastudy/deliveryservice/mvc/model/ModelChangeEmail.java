@@ -9,12 +9,12 @@ import javax.validation.constraints.Size;
 public class ModelChangeEmail implements Passwording {
     private String currentEmail;
 
-    @Size(min=5, max=64, message="{email.size}")
-    @Pattern(regexp="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}", message="{email.pattern}")
+    @Size(min = 5, max = 64, message = "{email.size}")
+    @Pattern(regexp = "[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}", message = "{email.pattern}")
     private String newEmail;
 
-    @Size(min=6, max=16, message="{password.size}")
-    @Pattern(regexp="^[-+*/|\\\\ @#$%^&(){}?!,.:;`~_'\\\"<>a-zA-Z0-9]+$", message="{password.pattern}")
+    @Size(min = 6, max = 16, message = "{password.size}")
+    @Pattern(regexp = "^[-+*/|\\\\ @#$%^&(){}?!,.:;`~_'\\\"<>a-zA-Z0-9]+$", message = "{password.pattern}")
     private String password;
 
     public ModelChangeEmail() {

@@ -27,7 +27,7 @@
     <div class="panel-body">
         <%--Change Phone--%>
         <form:form action="${url}" modelAttribute="phone" method="post"
-                   role="form" class="form-horizontal">
+                   userRole="form" class="form-horizontal">
             <div class="form-group">
                     <%--Current Phone--%>
                 <div class="form-group">

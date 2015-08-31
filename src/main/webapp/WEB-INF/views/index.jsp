@@ -11,6 +11,7 @@
         <h2>Задание выполнил:</h2>
         <ol>
             <li><a href="client/profile">Client profile</a></li>
+            <li><a href="operator">Operator</a></li>
         </ol>
     </body>
 </html>

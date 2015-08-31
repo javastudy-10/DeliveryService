@@ -1,0 +1,2 @@
+-- INSERT INTO PUBLIC.ADDRESS (zip, region, district, city, street, house, apartment, longitude, latitude) VALUES (null, 'Луганская область', 'Первомайский район', 'Первомайск', 'Харьковская', '7', '17', null, null);
+INSERT INTO PUBLIC.CUSTOMER (zip, region) VALUES (null, 'Луганская область');

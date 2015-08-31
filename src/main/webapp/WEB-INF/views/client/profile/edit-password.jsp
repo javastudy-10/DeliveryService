@@ -27,7 +27,7 @@
     <div class="panel-body">
         <%--Change Password--%>
         <form:form action="${url}" modelAttribute="password" method="post"
-                   role="form" class="form-horizontal">
+                   userRole="form" class="form-horizontal">
             <div class="form-group">
                     <%--Current Password--%>
                 <div class="form-group">
