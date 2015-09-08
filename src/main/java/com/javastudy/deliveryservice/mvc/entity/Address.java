@@ -1,6 +1,7 @@
 package com.javastudy.deliveryservice.mvc.entity;
 
 import com.javastudy.deliveryservice.validation.Sizes;
+import org.hibernate.validator.constraints.NotEmpty;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -14,6 +15,7 @@ import java.io.Serializable;
 @Table(name = "address",
         uniqueConstraints = @UniqueConstraint(columnNames = {"region", "district", "city", "street", "house", "apartment"}))
 public class Address implements Serializable {
+    private static final long serialVersionUID = 1L;
     private static final String DEFAULT_DISTRICT = "";
     private static final String DEFAULT_APARTMENT = "";
 
@@ -26,6 +28,7 @@ public class Address implements Serializable {
 
     @Column(name = "region", length = Sizes.Address.MAX_REGION, nullable = false)
     @NotNull(message = "{address.region.notnull}")
+    @NotEmpty(message = "{address.region.notempty}")
     @Size(max = Sizes.Address.MAX_REGION, message = "{address.region.size}")
     private String region;
 
@@ -35,16 +38,19 @@ public class Address implements Serializable {
 
     @Column(name = "city", length = Sizes.Address.MAX_CITY, nullable = false)
     @NotNull(message = "{address.city.notnull}")
+    @NotEmpty(message = "{address.city.notempty}")
     @Size(max = Sizes.Address.MAX_CITY, message = "{address.city.size}")
     private String city;
 
     @Column(name = "street", length = Sizes.Address.MAX_STREET, nullable = false)
     @NotNull(message = "{address.street.notnull}")
+    @NotEmpty(message = "{address.street.notempty}")
     @Size(max = Sizes.Address.MAX_STREET, message = "{address.street.size}")
     private String street;
 
     @Column(name = "house", length = Sizes.Address.MAX_HOUSE, nullable = false)
     @NotNull(message = "{address.house.notnull}")
+    @NotEmpty(message = "{address.house.notempty}")
     @Size(max = Sizes.Address.MAX_HOUSE, message = "{address.house.size}")
     private String house;
 

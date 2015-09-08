@@ -13,6 +13,7 @@ import javax.validation.Validator;
 import javax.validation.ValidatorFactory;
 
 import static com.javastady.deliveryservice.test.Util.fillString;
+import static com.javastady.deliveryservice.test.Util.printConstraintViolation;
 import static org.junit.Assert.*;
 
 
@@ -23,9 +24,12 @@ public class AddressTest {
     public static final String REGION = "Киевская область";
     public static final String DISTRICT = "Подольский район";
     public static final String CITY = "Киев";
-    public static final String STREET = "Кобзарський";
+    public static final String STREET = "Кобзарський переулок";
     public static final String HOUSE = "1";
     public static final String APARTMENT = "15";
+
+    private static final int ANNOTATIONS_NOTNULL = 4;
+    private static final int ANNOTATIONS_NOTEMPTY = 4;
 
     static AddressDao addressDao;
     private static Long id = 0L;
@@ -103,17 +107,32 @@ public class AddressTest {
     }
 
     @Test()
-    public void should6() throws Exception { //shouldErrorValidationNotNull
+    public void should6() throws Exception { //shouldErrorValidationNotNullAndNotEmpty
         Address address = new Address();
 
         ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
         Validator validator = factory.getValidator();
 
-        assertEquals(validator.validate(address).size(), 4);
+        printConstraintViolation(validator.validate(address));
+        assertEquals(validator.validate(address).size(), ANNOTATIONS_NOTNULL + ANNOTATIONS_NOTEMPTY);
     }
 
     @Test()
-    public void should7() throws Exception { //shouldErrorValidationSize
+    public void should7() throws Exception { //shouldErrorValidationNotEmpty
+        Address address = createAddress();
+        address.setRegion("");
+        address.setCity("");
+        address.setStreet("");
+        address.setHouse("");
+
+        ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
+        Validator validator = factory.getValidator();
+
+        assertEquals(validator.validate(address).size(), ANNOTATIONS_NOTEMPTY);
+    }
+
+    @Test()
+    public void should8() throws Exception { //shouldErrorValidationMax
         Address address = new Address();
         address.setRegion(fillString(Sizes.Address.MAX_REGION + 1, '*'));
         address.setDistrict(fillString(Sizes.Address.MAX_DISTRICT + 1, '*'));
