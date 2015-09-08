@@ -14,6 +14,19 @@ class Util {
         return new String(array);
     }
 
+    public static <T> int amountConstraintViolation(Set<ConstraintViolation<T>> constraintViolations, Class<?> annotation) {
+        int result = 0;
+        String annotationName = annotation.getName();
+
+        for (ConstraintViolation cv : constraintViolations) {
+            if (cv.getConstraintDescriptor().getAnnotation().toString().startsWith(annotationName, 1)) {
+                ++result;
+            }
+        }
+
+        return result;
+    }
+
     public static <T> void printConstraintViolation(Set<ConstraintViolation<T>> constraintViolations) {
         for (ConstraintViolation cv : constraintViolations) {
             System.out.println(padRight("ConstraintDescriptor Annotation: ", 33) + cv.getConstraintDescriptor().getAnnotation());

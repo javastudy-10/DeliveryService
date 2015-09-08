@@ -12,6 +12,7 @@ import javax.validation.Validation;
 import javax.validation.Validator;
 import javax.validation.ValidatorFactory;
 
+import static com.javastady.deliveryservice.test.Util.amountConstraintViolation;
 import static com.javastady.deliveryservice.test.Util.fillString;
 import static com.javastady.deliveryservice.test.Util.printConstraintViolation;
 import static org.junit.Assert.*;
@@ -30,6 +31,7 @@ public class AddressTest {
 
     private static final int ANNOTATIONS_NOTNULL = 4;
     private static final int ANNOTATIONS_NOTEMPTY = 4;
+    private static final int ANNOTATIONS_MAX_SIZE = 6;
 
     static AddressDao addressDao;
     private static Long id = 0L;
@@ -107,14 +109,14 @@ public class AddressTest {
     }
 
     @Test()
-    public void should6() throws Exception { //shouldErrorValidationNotNullAndNotEmpty
+    public void should6() throws Exception { //shouldErrorValidationNotNull
         Address address = new Address();
 
         ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
         Validator validator = factory.getValidator();
 
-        printConstraintViolation(validator.validate(address));
-        assertEquals(validator.validate(address).size(), ANNOTATIONS_NOTNULL + ANNOTATIONS_NOTEMPTY);
+        int amount = amountConstraintViolation(validator.validate(address), javax.validation.constraints.NotNull.class);
+        assertEquals(amount, ANNOTATIONS_NOTNULL);
     }
 
     @Test()
@@ -128,7 +130,8 @@ public class AddressTest {
         ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
         Validator validator = factory.getValidator();
 
-        assertEquals(validator.validate(address).size(), ANNOTATIONS_NOTEMPTY);
+        int amount = amountConstraintViolation(validator.validate(address), org.hibernate.validator.constraints.NotEmpty.class);
+        assertEquals(amount, ANNOTATIONS_NOTEMPTY);
     }
 
     @Test()
@@ -144,7 +147,7 @@ public class AddressTest {
         ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
         Validator validator = factory.getValidator();
 
-        assertEquals(validator.validate(address).size(), 6);
-
+        int amount = amountConstraintViolation(validator.validate(address), javax.validation.constraints.Size.class);
+        assertEquals(amount, ANNOTATIONS_MAX_SIZE);
     }
 }
