@@ -73,9 +73,10 @@ public class CustomerTest {
         assertNull(customer);
     }
 
-    @Test(expected = javax.persistence.NoResultException.class)
+    @Test
     public void should01() throws Exception { //shouldNotFindCustomerByLogin
         Customer customer = customerDao.findByLogin(INVALID_LOGIN);
+        assertNull(customer);
     }
 
     @Test

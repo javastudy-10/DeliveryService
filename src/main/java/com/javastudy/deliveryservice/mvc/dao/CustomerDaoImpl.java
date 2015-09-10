@@ -4,6 +4,7 @@ import com.javastudy.deliveryservice.mvc.entity.Customer;
 import org.springframework.stereotype.Component;
 
 import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
 import javax.transaction.Transactional;
 import java.util.List;
@@ -19,11 +20,11 @@ public class CustomerDaoImpl implements CustomerDao {
 
     @Override
     public Customer findByLogin(String login) {
-//        try {
-        return (Customer) em.createNamedQuery("Customer.findByLogin").setParameter("login", login).getSingleResult();
-//        } catch (NoResultException e) {
-//            return null;
-//        }
+        try {
+            return (Customer) em.createNamedQuery("Customer.findByLogin").setParameter("login", login).getSingleResult();
+        } catch (NoResultException e) {
+            return null;
+        }
     }
 
     @Override
