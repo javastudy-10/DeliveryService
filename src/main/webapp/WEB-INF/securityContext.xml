@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:security="http://www.springframework.org/schema/security"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/security
+       http://www.springframework.org/schema/security/spring-security.xsd">
+
+    <!--<context:component-scan base-package="com.javastudy.deliveryservice.mvc.dao"/>-->
+
+    <!--Customer-->
+    <security:http use-expressions="true" pattern="/client/**" authentication-manager-ref="customerAuthMgr">
+        <security:intercept-url pattern="/client/login" access="permitAll"/>
+        <security:intercept-url pattern="/client/auth" access="permitAll"/>
+        <security:intercept-url pattern="/client/**" access="hasRole('ROLE_CLIENT') || hasRole('ROLE_ADMIN')"/>
+
+        <security:form-login
+                login-processing-url="/client/login"
+                login-page="/client/auth"
+                authentication-failure-url="/client/auth?error=true"
+                always-use-default-target="false"/>
+
+        <security:logout logout-url="/client/logout" logout-success-url="/" />
+        <security:remember-me remember-me-parameter="remember-me"
+                              key="x3hRjDss"
+                              user-service-ref="customerDetailsService"/>
+    </security:http>
+
+    <security:authentication-manager id="customerAuthMgr">
+        <!--<security:authentication-provider user-service-ref="customerDetailsService" />-->
+        <security:authentication-provider>
+            <security:user-service>
+                <security:user name="user" password="user" authorities="ROLE_CLIENT" />
+                <security:user name="admin" password="admin" authorities="ROLE_ADMIN" />
+            </security:user-service>
+        </security:authentication-provider>
+    </security:authentication-manager>
+
+    <bean id="customerDetailsService" class="com.javastudy.deliveryservice.security.AuthCustomerDetailsService" />
+</beans>

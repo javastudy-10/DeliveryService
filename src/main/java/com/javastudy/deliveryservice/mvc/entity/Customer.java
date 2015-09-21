@@ -1,5 +1,6 @@
 package com.javastudy.deliveryservice.mvc.entity;
 
+import com.javastudy.deliveryservice.security.AuthInfo;
 import com.javastudy.deliveryservice.validation.Patterns;
 import com.javastudy.deliveryservice.validation.Sizes;
 import org.hibernate.validator.constraints.Email;
@@ -28,7 +29,7 @@ import java.io.Serializable;
         @NamedQuery(name = "Customer.findAllWithDetails",
                 query = "select c from Customer c inner join fetch c.address")
 })
-public class Customer implements Serializable {
+public class Customer implements AuthInfo, Serializable {
     @Id
     @GeneratedValue
     private Long id;

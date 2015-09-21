@@ -10,6 +10,6 @@
        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
 
     <import resource="databaseTest.xml"/>
-    <import resource="securityContextTest.xml"/>
+    <import resource="file:src/main/webapp/WEB-INF/securityContext.xml"/>
 
 </beans>
